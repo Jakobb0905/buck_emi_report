@@ -27,7 +27,7 @@
         "-shell-escape",
         "-file-line-error",
         "-pdf",
-        "-outdir=%OUTDIR%/build",
+        "-outdir=%OUTDIR%",
         "%DOC%"
       ],
       "env": {}
