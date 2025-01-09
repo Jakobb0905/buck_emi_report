@@ -14,16 +14,16 @@ The Results show that the use of an X-cap alone is sufficient enough to reduce t
 
 The use of a \gls{acr:cmc} in addition to the X-cap further reduces the overall emissions, but the difference is marginal. Additionally, a substantial spike in \gls{acr:cm} emissions is observed at \qty{1}{\mega\hertz} as can be seen in \autoref{fig:cmc_x_cap_emc}. This spike is likely due to the resonance of the \gls{acr:cmc} and the parasitic capacitance of the buck converter and leads to a no-pass criterion for the EN 55022/32 standard.
 
-The use of Y-caps in addition to the X-cap and the \gls{acr:cmc} reduces the conducted \gls{acr:cm} emissions of the buck converter which are now well below the limit of the EN 55022/32 standard. The output voltage ripple is also reduced to a level that is acceptable for sensitive applications as can be seen in \autoref{fig:cmc_x_cap_y_cap_ripple}.
+The use of Y-caps in addition to the X-cap and the \gls{acr:cmc} reduces the conducted \gls{acr:cm} emissions of the buck converter which are now well below the limit of the EN 55022/32 standard. The output voltage ripple is also reduced to a level that is acceptable for sensitive applications as can be seen in \autoref{fig:cmc_x_cap_y_cap_vout}.
 
 In conclusion, the use of an X-cap alone is sufficient to reduce the conducted emissions of the buck converter to an acceptable level. 
 By implementing a \gls{acr:cmc} and Y-caps in addition to the X-cap, the emissions can be further reduced whilst also reducing the output voltage ripple.
 
 \section{PCB Layout Considerations}
 \label{section:pcb_layout_considerations}
-For our implemented methods to be efficte in a real world scenario, a fitting \Gls{acr:pcb} layout is crucial. The following points should be considered\autocite{LT8618DatasheetProduct}:
+For our implemented methods to be efficte in a real world scenario, a fitting \Gls{acr:pcb} layout is crucial. The following points should be considered \autocite{LT8618DatasheetProduct}:
 \begin{itemize}
-    \item Place the input capacitor (CIN) adjacent to the VIN and GND pins to minimize the loop formed by the input capacitor.
+    \item Place the input capacitor ($C_{IN}$) adjacent to the VIN and GND pins to minimize the loop formed by the input capacitor.
     \item If using a large input capacitor, place a small case/value capacitor close to the VIN and GND pins and the larger capacitor further away.
     \item Place the inductor and output capacitor (COUT) on the same side of the circuit board as the input capacitor.
     \item Ensure connections for the input capacitor, inductor, and output capacitor are made on the same layer.
@@ -54,20 +54,4 @@ For our implemented methods to be efficte in a real world scenario, a fitting \G
     \end{subfigure}
     \caption{Recommended PCB layouts for the LT8618 (a) and LT8618C (b) buck converter \autocite{LT8618DatasheetProduct}}
 \end{figure}
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{pcb_layout_LT8618.png}
-%     \caption{recommended \gls{acr:pcb} layout of the LT8618 buck converter \autocite{LT8618DatasheetProduct}}
-%     \label{fig:pcb_layout_LT8618}
-% \end{figure}
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{pcb_layout_LT8618C.png}
-%     \caption{recommended \gls{acr:pcb} layout of the LT8618C buck converter \autocite{LT8618DatasheetProduct}}
-%     \label{fig:pcb_layout_LT8618C}
-% \end{figure}
-
-
 % EOF
