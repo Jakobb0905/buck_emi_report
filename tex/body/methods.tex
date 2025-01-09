@@ -1,0 +1,25 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+% !TEX root = ../main.tex
+% !TEX spellcheck = en-US
+% ****************************************************************************************
+% File: methods.tex
+% Author: Jakob Spindler
+% Date: 2024-10-16
+% ****************************************************************************************
+\chapter{Methods}
+\label{chapter:methods}
+
+To lower the conducted emissions of the buck converter, the following steps are taken:
+\begin{itemize}
+    \item place a capacitor at the buck converters input between rails (also known as x-cap) to reduce the \GLS{acr:dm} emissions \autocite{HowGetBest}
+    \item implement a \gls{acr:cmc} to reduce the \GLS{acr:cm} emissions \autocite{HowGetBest}
+    \item place capacitors between the rails and ground (also known as y-caps) to reduce the \GLS{acr:cm} emissions \autocite{hegartyHowActiveEMI2023}
+\end{itemize}
+
+
+
+in practice, many other methods can be used to reduce the conducted emissions of a buck converter, such as the use of ferrite beads/cores or even active filtering to name a few \autocite{hegartyHowActiveEMI2023,damnjanovicComparisonDifferentStructures2006}. However, the above-mentioned methods are chosen for their simplicity and cost-effectiveness.
+
+
+% EOF
